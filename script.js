@@ -84,3 +84,20 @@ let currDay = 0;
 while (confirm(`${days[currDay]}. Do you want to see a next day?`)) {
     currDay = (currDay + 1) % days.length;
 }
+
+//гра вгадай число
+let min = 0
+let max = 100
+
+alert(`Choose a number from 0 to 100`)
+
+while (min + 1 !== max) {
+    midNum = Math.floor((max + min) / 2)
+
+    if (confirm(`Is your number smaller than ${midNum}?`)) {
+        max = midNum
+    } else {
+        min = midNum
+    }
+}
+alert(`Your number is ${min}`)
