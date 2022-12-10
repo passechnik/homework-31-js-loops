@@ -57,3 +57,23 @@ if (numberSplit[0] === numberSplit[4], numberSplit[1] === numberSplit[3]) {
 } else {
     alert(`Your number is not a palindrome`);
 }
+
+//визначити суму до сплати зі знижкою
+let amount = prompt("Enter your purchase amount");
+if (amount < 200) {
+    alert(`You have no discount. For payment: ${amount}`);
+} else if (amount <= 300) {
+    let discount = amount * 0.03;
+    let finalAmount = amount - discount;
+    alert(`For payment: ${finalAmount}`);
+} else if (amount <= 500) {
+    let discount = amount * 0.05;
+    let finalAmount = amount - discount;
+    alert(`For payment: ${finalAmount}`);
+} else if (amount > 500) {
+    let discount = amount * 0.07;
+    let finalAmount = amount - discount;
+    alert(`For payment: ${finalAmount}`);
+} else {
+    alert(`Enter your purchase amount`);
+}
