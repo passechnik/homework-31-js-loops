@@ -77,3 +77,10 @@ if (amount < 200) {
 } else {
     alert(`Enter your purchase amount`);
 }
+
+// зациклити виведення днів тижня 
+let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",];
+let currDay = 0;
+while (confirm(`${days[currDay]}. Do you want to see a next day?`)) {
+    currDay = (currDay + 1) % days.length;
+}
