@@ -13,8 +13,8 @@ if (age <= 11) {
 }
 
 //вивести спецсимвол на число від 0 до 9
-let number = prompt("Choose a number berween 0 to 9")
-switch (+number) {
+let numberFirst = prompt("Choose a number berween 0 to 9")
+switch (+numberFirst) {
     case 1:
         alert('!');
         break;
@@ -47,4 +47,13 @@ switch (+number) {
         break;
     default:
         alert('There is no symbol for this character');
+}
+
+//визначити чи є число паліндромом
+let number = prompt("Enter a five-digit number");
+let numberSplit = (""+number).split("");
+if (numberSplit[0] === numberSplit[4], numberSplit[1] === numberSplit[3]) {
+    alert(`Your number is a palindrome`);
+} else {
+    alert(`Your number is not a palindrome`);
 }
