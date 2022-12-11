@@ -78,6 +78,24 @@ if (amount < 200) {
     alert(`Enter your purchase amount`);
 }
 
+//запитати у користувача 10 чисел, порахувати скільки додатніх, від'ємних і нулів
+let positive = 0
+let negative = 0
+let zeros = 0
+let even = 0
+let odd = 0
+// let nums = []
+for (let i = 0; i < 10; i++) {
+    // nums[i] = prompt("Enter a number")
+    const num = +prompt("Enter a number");
+    if (num < 0) negative++
+    if (num > 0) positive++
+    if (num == 0) zeros++
+    if (num % 2 == 0) even++
+    if (num % 2 != 0) odd++
+}
+console.log({negative, positive, zeros, even, odd});
+
 // зациклити виведення днів тижня 
 let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",];
 let currDay = 0;
